@@ -1,0 +1,15 @@
+/*page title*/
+h1 {
+    padding: 5px;
+    background-color: #36110e;
+    color: rgb(248, 249, 222);
+}
+/*backgroun color for nav bar*/
+.navbar-custom {
+    background-color: #36110e;
+}
+
+/*text link color*/
+.nav-link {
+    color:rgb(248, 249, 222)
+}
