@@ -22,6 +22,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
+            
+            {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+            {{else}}
+        <a href="/login">login</a>
+            {{/if}}
+
             <li class="nav-item active">
               <a class="nav-link" href="#">Home</a>
             </li>
@@ -38,6 +46,13 @@
       <hr class="my-4">
     </div>
     </div>
+      {{{body}}}
+
       {{card}}
+
+      {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+      {{/if}}
+
   </body>
 </html>
