@@ -42,12 +42,16 @@ h1 {
     background-color: #4B6587;
 }
 
-.card-body {
-    background-color: #F7F6F2;
-}
-
 .card-text {
 color: #4B6587;
+}
+
+.field {
+margin: 20px 800px 20px 800px;
+}
+
+#cardBody {
+    background-color: #F7F6F2;
 }
 
 #cardTitle {
@@ -60,15 +64,12 @@ color: #4B6587;
 
 #signup {
     color: #4B6587;
-    background-color: #C8C6C6 ;
+    background-color: #C8C6C6;
+    margin-left: 900px;
 }
 
 #login {
     background-color:#4B6587;
+    margin-right: 900px;
 }
 
-#loginform {
-    padding: 10px;
-    margin-left: 200px;
-    margin-right: 200px;
-}
