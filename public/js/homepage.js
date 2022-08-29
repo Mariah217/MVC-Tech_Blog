@@ -14,7 +14,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/profile'); //not sure what route this should be???
       } else {
         alert('Failed to post blog');
       }
@@ -30,7 +30,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/profile'); //not sure what route this should be??
       } else {
         alert('Failed to delete blog');
       }

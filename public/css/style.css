@@ -17,6 +17,10 @@ h2 {
     color: #4B6587;
 }
 
+.textarea{
+    border-color: none;
+}
+
 .nav-link {
     background-color: #4B6587;
     color:#F7F6F2;
@@ -60,4 +64,12 @@ color: #4B6587;
 
 #password, #email, #name {
     color: #4B6587;
+}
+
+#title{
+    border-color: none;
+}
+
+#blogcontent {
+    border-color: none;
 }
