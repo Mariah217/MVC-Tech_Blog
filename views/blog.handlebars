@@ -1,0 +1,9 @@
+{{!-- current blog and you can leave a comment --}}
+
+<div class="text-center">
+  <h2>{{title}}</h2> {{!-- from blog.js model --}}
+  <p>{{content}}</p> {{!-- from blog.js model --}}
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+    <button class="btn btn-primary">Add Comment</button>
+  </p>
+</div>
