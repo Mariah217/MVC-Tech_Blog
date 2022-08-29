@@ -1,26 +1,44 @@
-<div class="notification has-background-black-bis has-text-white-bis is-mobile">
+<main class="container container-fluid mt-5">
+      <div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
 
-  <form class="card-body login-form">
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">Email:</label>
+        <input class="form-input" type="text" id="email-login">
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input class="form-input" type="password" id="password-login">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
 
-    <div class="field">
-      <label class="form-label center">Username</label>
-        <div class="control center">
-          <input class="form-input" type="text" id="username-input-login" />
-        </div>
-    </div>
-
-        <div class="field">
-          <label class="form-label center">Password</label>
-            <div class="control center">
-              <input class="form-input" type="password" id="password-input-login" />
-           </div>
-        </div>
-
-
-        <div class="buttons center">
-          <a class="login-link button is-light" href="/signup">Sign Up</a>
-          <button type="submit" class="button is-success">Login</button>
-        </div>
-  </form>
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">Name:</label>
+        <input class="form-input" type="text" id="name-signup">
+      </div>
+      <div class="form-group">
+        <label for="email-signup">Email:</label>
+        <input class="form-input" type="text" id="email-signup">
+      </div>
+      <div class="form-group">
+        <label for="password-signup">Password:</label>
+        <input class="form-input" type="password" id="password-signup">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Signup</button>
+      </div>
+    </form>
+  </div>
 </div>
-<script src="js/login.js"></script>
+
+<script src="./js/login.js"></script>
+    </main>

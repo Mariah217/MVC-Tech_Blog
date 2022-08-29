@@ -53,27 +53,49 @@
 </html>
 
 
-<!-- login page -->
+<!-- login/sign up page -->
 
-  <form class="card-body login-form">
+<main class="container container-fluid mt-5">
+  <div class="row">
+<div class="col-md-6">
+<h2>Login</h2>
 
-    <div class="field">
-      <label class="form-label center" id="username">Username</label>
-        <div class="control center">
-          <input class="form-input" type="text" id="username-input-login" />
-        </div>
-    </div>
-
-        <div class="field" id="formField">
-          <label class="form-label center" id="password">Password</label>
-            <div class="control center">
-              <input class="form-input" type="password" id="password-input-login" />
-           </div>
-        </div>
-        <div class="buttons center">
-          <a class="login-link button is-light" href="/signup" id="signup">Sign Up</a>
-          <button type="submit" class="button is-success" id="login">Login</button>
-        </div>
-  </form>
+<form class="form login-form">
+  <div class="form-group">
+    <label for="email-login" id="email">Email:</label>
+    <input class="form-input" type="text" id="email-login">
+  </div>
+  <div class="form-group">
+    <label for="password-login" id="password">Password:</label>
+    <input class="form-input" type="password" id="password-login">
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Login</button>
+  </div>
+</form>
 </div>
-<script src="../js/login.js"></script>
+<div class="col-md-6">
+<h2>Signup</h2>
+
+<form class="form signup-form">
+  <div class="form-group">
+    <label for="name-signup" id="name">Name:</label>
+    <input class="form-input" type="text" id="name-signup">
+  </div>
+  <div class="form-group">
+    <label for="email-signup" id="email">Email:</label>
+    <input class="form-input" type="text" id="email-signup">
+  </div>
+  <div class="form-group">
+    <label for="password-signup" id="password">Password:</label>
+    <input class="form-input" type="password" id="password-signup">
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Signup</button>
+  </div>
+</form>
+</div>
+</div>
+
+<script src="./js/login.js"></script>
+</main>

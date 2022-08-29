@@ -13,6 +13,10 @@ h1 {
     text-shadow: 4px 4px 8px #10151c ;
 }
 
+h2 {
+    color: #4B6587;
+}
+
 .nav-link {
     background-color: #4B6587;
     color:#F7F6F2;
@@ -46,10 +50,6 @@ h1 {
 color: #4B6587;
 }
 
-.field {
-margin: 20px 800px 20px 800px;
-}
-
 #cardBody {
     background-color: #F7F6F2;
 }
@@ -58,18 +58,6 @@ margin: 20px 800px 20px 800px;
     color: #F7F6F2;
 }
 
-#username, #password {
+#password, #email, #name {
     color: #4B6587;
 }
-
-#signup {
-    color: #4B6587;
-    background-color: #F7F6F2;
-    margin-left: 900px;
-}
-
-#login {
-    background-color:#4B6587;
-    margin-right: 900px;
-}
-
