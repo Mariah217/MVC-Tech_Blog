@@ -5,7 +5,7 @@ const { Blog, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  // try {
+  try {
     const blogData = await Blog.findAll({
       include: [
         {
@@ -21,9 +21,9 @@ router.get('/', async (req, res) => {
       blogs, 
       logged_in: req.session.logged_in 
     });
-  // } catch (err) {
-  //   res.status(500).json(err);
-  // }
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/blog/:id', async (req, res) => {
@@ -47,6 +47,8 @@ router.get('/blog/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// after I log in, it tries to route me to /profile???
 
 router.get('/dashboard', withAuth, async (req, res) => { 
   try {

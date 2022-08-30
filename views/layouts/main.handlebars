@@ -25,8 +25,7 @@
           <ul class="navbar-nav mr-auto">
             
             {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <button class="nav-link" id="logout">Logout</button>
             {{else}}
         <li class="nav-item">
               <a class="nav-link" href="/login">Login</a>
@@ -37,7 +36,7 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="???">Dashboard</a>
+              <a class="nav-link" href="/dashboard">Dashboard</a> {{!-- unsure what this route is supposed to be??? --}}
             </li>
           </ul>
         </div>
