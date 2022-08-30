@@ -1,28 +1,5 @@
 <!-- homepage/add new blog/does NOT display current blogs, dashboard displays blogs -->
 
-<section class="section is-paddingless-horizontal">
-  <div class="container grid-xl">
-    <div class="columns is-mobile">
-      <div class="column is-full-width">
-        <div class="notification">
-          {{date_created}}
-          <form id="new-post-form">
-            <div class="field center">
-              <div class="control">
-                <input type="text" placeholder="Title" id="blog-title">
-              </div>
-            </div>
-
-            <textarea class="textarea is-large" rows="6" class='form-control' name="post-body" id="blog-content"
-              placeholder="Start blog..."></textarea>
-          <br>
-            <div class="buttons center">
-              <div class="text-right">
-                <button class="btn btn-primary" type="submit">Submit</button>
-              </div>
-            </div>
-          </form>
-          <br>
     <!-- posted blogs (blog post title and date created only)  -->
          <div class="control">
             {{#each blogs}}
@@ -36,6 +13,9 @@
     </div>
   </div>
 </section>
+
+<br>
+<br>
 
 <!--need new post button to populate new post/textarea-->
 <button class="btn"><i class="fa-solid fa-plus"> New Post</i></button>
