@@ -1,10 +1,23 @@
 {{!-- displays current blogs --}}
 
-<div class="card">
-      <div class="card-header" id="cardTitle">
-        {{title}}
-      </div>
-      <div class="card-body">
-        <p class="card-text">{{content}}</p>
+
+              <!-- posted blogs  -->
+
+          <div class="control">
+            {{#each blogs}}
+            <field class="textarea has-fixed-size" rows="1">
+              {{title}} by {{user.name}} on {{format_date date_created}}
+            </field>
+
+            <textarea class="textarea" rows="3" id="blogcontent">
+              {{content}}
+            </textarea>
+            {{/each}}
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
+<script src="js/homepage.js"></script>

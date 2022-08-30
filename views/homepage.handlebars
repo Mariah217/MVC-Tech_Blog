@@ -1,11 +1,11 @@
-<!-- homepage/add new blog -->
+<!-- homepage/add new blog/does NOT display current blogs, dashboard displays blogs -->
 
 <section class="section is-paddingless-horizontal">
   <div class="container grid-xl">
     <div class="columns is-mobile">
       <div class="column is-full-width">
         <div class="notification">
-          {{post.date}}
+          {{date_created}}
           <form id="new-post-form">
             <div class="field center">
               <div class="control">
@@ -23,18 +23,13 @@
             </div>
           </form>
           <br>
-
-          <!-- posted blogs  -->
-
-          <div class="control">
-            {{#each stories}}
+    <!-- posted blogs (blog post title and date created only)  -->
+         <div class="control">
+            {{#each blogs}}
             <field class="textarea has-fixed-size" rows="1">
-              {{title}} by {{user.username}} on {{format_date date_created}}
+              {{title}} by {{user.name}} on {{format_date date_created}}
             </field>
-
-            <textarea class="textarea" rows="3" id="blogcontent">
-              {{content}}
-            </textarea>
+            {{/each}}
           </div>
         </div>
       </div>
@@ -42,4 +37,7 @@
   </div>
 </section>
 
-<script src="js/homepage.js"></script> <a href="{{post.url}}" class="lead">{{post.title}}</a>
+<!--need new post button to populate new post/textarea-->
+<button class="btn"><i class="fa-solid fa-plus"> New Post</i></button>
+
+<script src="js/homepage.js"></script>
