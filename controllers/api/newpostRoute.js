@@ -1,14 +1,15 @@
 const router = require('express').Router();
 const { NewPost } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 
-router.post('/', async (req, res) => {
+router.post('/newpost', async (req, res) => {
     try {
-        const newStory = await NewPost.create({
+        const newPost = await NewPost.create({
             ...req.body,
             user_id: req.session.user_id,
         });
-        res.status(200).json(newStory);
+        res.status(200).json(newPost);
         
    } catch (err) {
       res.status(400).json(err)
@@ -16,22 +17,20 @@ router.post('/', async (req, res) => {
 
 });
 
-// delete story with story id
-
-router.delete('/:NewStoryId', (req, res) => {
+router.delete('/:NewPostId', (req, res) => {
     try {
-        const storyData = Story.destroy({
+        const postData = Post.destroy({
             where: {
                 id: req.parasm.id,
                 user_id: req.session.user_id,
             },
         });
 
-        if(!storyData) {
-            res.status(404).json({ message: 'No story found with this id!' });
+        if(!postData) {
+            res.status(404).json({ message: 'No post found with this id!' });
             return;
         }
-        res.status(200).json(storyData);
+        res.status(200).json(postData);
     } catch (err) {
         res.status(500).json(err);
     }

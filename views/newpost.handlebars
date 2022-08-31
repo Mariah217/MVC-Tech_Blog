@@ -1,23 +1,38 @@
-<section class="section is-paddingless-horizontal">
-  <div class="container grid-xl">
-    <div class="columns is-mobile">
-      <div class="column is-full-width">
-        <div class="notification">
-          {{date_created}}
-          <form id="new-post-form">
-            <div class="field center">
-              <div class="control">
-                <input type="text" placeholder="Title" id="blog-title">
-              </div>
-            </div>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Blog:</h3>
 
-            <textarea class="textarea is-large" rows="6" class='form-control' name="post-body" id="blog-content"
-              placeholder="Start blog..."></textarea>
-          <br>
-            <div class="buttons center">
-              <div class="text-right">
-                <button class="btn btn-primary" type="submit">Submit</button>
-              </div>
-            </div>
-          </form>
-          <br>
+    <form class="form new-blog-form">
+      <div class="form-group">
+        <label for="blog-name">Blog Name:</label>
+        <input class="form-input" type="text" id="blog-name" name="blog-name" />
+      </div>
+      <div class="form-group">
+        <label for="blog-desc">Blog Content: </label>
+        <textarea class="form-input" id="blog-desc" name="blog-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if blogs.length}}
+  <div class="col-md-6 blog-list">
+    <h3>Current blogs:</h3>
+
+    {{#each blogs as |blog|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/blog/{{blog.id}}">{{blog.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>

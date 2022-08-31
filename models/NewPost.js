@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class NewPost extends Model {}
 
-NewStory.init(
+NewPost.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -37,7 +37,7 @@ NewStory.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'newstory',
+    modelName: 'newpost',
   }
 );
 
