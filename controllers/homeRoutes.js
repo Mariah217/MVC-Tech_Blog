@@ -1,4 +1,4 @@
-//dashboard with all current blogs
+//dashboard with all current blogs from all users
 
 const router = require('express').Router();
 const { Blog, User } = require('../models');

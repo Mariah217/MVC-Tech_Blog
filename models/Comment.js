@@ -13,6 +13,7 @@ Comment.init(
         },
         comments: {
             type: DataTypes.STRING,
+            allowNull: false,
         },
         date_created: {
             type: DataTypes.DATE,

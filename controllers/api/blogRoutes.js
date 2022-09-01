@@ -35,4 +35,23 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
+// router.get('/blogs/:blog_id', (req,res)=> {
+//   try{
+//       const getBlog = Blog.fetch({
+//           where: {
+//               id: req.params.blog_id,
+//           },
+//       })
+//       if (!getBlog) {
+//           res.status(404).json({message: 'No blog found with this id!'});
+//           return;
+//       }
+//       res.render('blogs/' + getBlog.id, {
+//          getBlog,
+//         })
+//   } catch (err) {
+//       res.status(500).json(err);
+//   }
+// })
+
 module.exports = router;

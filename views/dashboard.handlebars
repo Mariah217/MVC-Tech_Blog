@@ -1,20 +1,21 @@
-{{!-- displays current posted blogs --}}
+{{! displays current posted blogs }}
 
-          <div class="control">
-            {{#each blogs}}
-            <field class="textarea has-fixed-size" rows="1">
-              {{title}} by {{user.name}} on {{format_date date_created}}
-            </field>
+<div class="control">
+  {{#each blogs}}
+    <field class="textarea has-fixed-size" rows="1">
+      {{title}}
+      by
+      {{user.name}}
+      on
+      {{format_date date_created}}
+    </field>
 
-            <textarea class="textarea" rows="3" id="blogcontent">
-              {{content}}
-            </textarea>
-            {{/each}}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <textarea class="textarea" rows="3" id="blogcontent">
+      {{content}}
+    </textarea>
+  {{/each}}
+</div>
+
+<button class="btn"><i class="fa-solid fa-plus"> New Post</i></button>
 
 <script src="js/homepage.js"></script>

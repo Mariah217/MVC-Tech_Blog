@@ -18,7 +18,8 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const validPassword = await userData.checkPassword(req.body.password);
+    const userBeingLoggedIn = await User.findOne({where: {email: req.body.email}});
+    const validPassword = await userBeingLoggedIn.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
@@ -28,10 +29,10 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = userBeingLoggedIn.id;
       req.session.logged_in = true;
       
-      res.json({ user: userData, message: 'You are now logged in!' });
+      res.json({ user: userBeingLoggedIn, message: 'You are now logged in!' });
     });
 
   } catch (err) {
