@@ -1,6 +1,6 @@
-const postId = document.querySelector('input[name="post-id"]').value;
+const blogId = document.querySelector('input[name="blog-id"]').value;
 
-console.log(postId);
+console.log(blogId);
 
 const commentFormHandler = async (event) => {
   event.preventDefault();
@@ -12,7 +12,7 @@ const commentFormHandler = async (event) => {
     const response = await fetch('/api/comment', {
       method: 'POST',
       body: JSON.stringify({
-        postId,
+        blogId,
         commentContent
       }),
       headers: {
@@ -28,5 +28,5 @@ const commentFormHandler = async (event) => {
 }
 
 document
-  .querySelector('#new-comment-form') //not sure what this needs to be??
+  .querySelector('#postCommentBtn') //not sure what this needs to be??
   .addEventListener('submit', commentFormHandler);

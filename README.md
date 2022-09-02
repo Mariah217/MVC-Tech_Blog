@@ -15,17 +15,14 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-To get started with this application, there are several different libraries that will need to be installed. Those libraries include: express-handlebars, MySQL2, Sequelize, dotenv package, bcrypt package, express-session and connect-session-sequelize. To install these, open a new terminal and type NPM install **insert name of library/package here**. Once all the libraries have been installed, open a new terminal and type npm run seed and then npm start. npm start will connect the server, you can click on the link provided in the terminal and it will launch the website/application.
+To get started with this application, there are several different libraries that will need to be installed. Those libraries include: express-handlebars, MySQL2, Sequelize, dotenv package, bcrypt package, express-session and connect-session-sequelize. To install these, open a new terminal and type NPM install **insert name of library/package here**. Once all the libraries have been installed, open a new terminal and type npm run seed and then npm start. npm start will connect the server. Once connected to the server, type localhost:3001 into the URL of your browser to view the website.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+![loginpage](assets/TechBlog2.PNG)
+![homepage](assets/techblog.PNG)
+![dashboard](assets/dashboard.PNG)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 I reference the mini project from MVC week.
