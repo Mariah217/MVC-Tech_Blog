@@ -4,6 +4,21 @@
   <h2>{{title}}</h2> {{!-- from blog.js model --}}
   <p>{{content}}</p> {{!-- from blog.js model --}}
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
-    <button class="btn btn-primary">Add Comment</button>
+    <article class="media">
+  <figure class="media-left">
+  </figure>
+  <div class="media-content">
+    <div class="field">
+      <p class="control">
+        <textarea class="textarea" id="addCommentTextArea" placeholder="Add a comment..."></textarea>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control">
+        <button class="button" id="postCommentBtn">Post comment</button>
+      </p>
+    </div>
+  </div>
+</article>
   </p>
 </div>

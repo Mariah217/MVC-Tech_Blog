@@ -77,3 +77,12 @@ color: #4B6587;
 #logout {
     border: none;
 }
+
+#postCommentBtn {
+    color: #F7F6F2;
+    background-color: #4B6587;
+}
+
+#addCommentTextArea{
+background-color: #F7F6F2;
+}
