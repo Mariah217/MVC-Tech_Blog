@@ -26,6 +26,7 @@ const sess = {
   store: new SequelizeStore({
     db: sequelize
   })
+  
 };
 
 
